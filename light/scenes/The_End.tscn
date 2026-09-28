@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://8cssl8r3706e"]
+
+[ext_resource type="FontFile" uid="uid://c8o4vw8wwpvih" path="res://assets/Merriweather-VariableFont_opsz,wdth,wght.ttf" id="1_67h56"]
+[ext_resource type="Script" uid="uid://cgx6wlyw470ca" path="res://scripts/the_end.gd" id="1_72hle"]
+
+[node name="The_End" type="Node2D" unique_id=383756552]
+script = ExtResource("1_72hle")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=790425358]
+offset_right = 1144.0
+offset_bottom = 642.0
+color = Color(0.16089237, 0.38168928, 0.47068572, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1405188673]
+offset_left = -90.0
+offset_top = 109.0
+offset_right = 1216.0
+offset_bottom = 213.0
+theme_override_fonts/font = ExtResource("1_67h56")
+theme_override_font_sizes/font_size = 48
+text = "You have reached the core stabilising it 
+		Congratulations!"
+horizontal_alignment = 1
+
+[node name="Retry" type="Button" parent="." unique_id=1064520488]
+offset_left = 478.0
+offset_top = 369.0
+offset_right = 621.0
+offset_bottom = 430.0
+theme_override_font_sizes/font_size = 22
+text = "⭮ Retry"
+
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://bd3hg3kudtu8o"]
+
+[ext_resource type="Texture2D" uid="uid://c8qv673el42s8" path="res://assets/title_Screen.png" id="1_fgkus"]
+[ext_resource type="Script" uid="uid://tmwi5vddj7hs" path="res://scripts/title_screen.gd" id="1_s4lrb"]
+[ext_resource type="FontFile" uid="uid://b7iu0sb50h5gh" path="res://assets/RobotoCondensed-VariableFont_wght.ttf" id="2_sa3yf"]
+
+[node name="Title_Screen" type="Node2D" unique_id=673640145]
+script = ExtResource("1_s4lrb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1138240422]
+position = Vector2(557, 322.875)
+scale = Vector2(7.3888893, 2.6038308)
+texture = ExtResource("1_fgkus")
+
+[node name="Button" type="Button" parent="." unique_id=1147365516]
+offset_left = 400.0
+offset_top = 442.0
+offset_right = 684.0
+offset_bottom = 558.0
+theme_override_fonts/font = ExtResource("2_sa3yf")
+theme_override_font_sizes/font_size = 48
+text = "Start
+"
+
+[node name="Label" type="Label" parent="." unique_id=1536864046]
+offset_left = 176.0
+offset_top = 77.0
+offset_right = 898.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0.4553057, 0.2107862, 0.13903272, 1)
+theme_override_fonts/font = ExtResource("2_sa3yf")
+theme_override_font_sizes/font_size = 91
+text = "Wraith"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

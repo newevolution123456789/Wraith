@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bv3djwsxqax6d"]
+
+[ext_resource type="Script" uid="uid://bdvhourya530c" path="res://scripts/key.gd" id="1_fttkb"]
+[ext_resource type="Texture2D" uid="uid://b1ak5i3wrg1hh" path="res://assets/Dungeon Tile Set.png" id="1_yk2u2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fttkb"]
+size = Vector2(19, 10)
+
+[sub_resource type="Gradient" id="Gradient_fttkb"]
+offsets = PackedFloat32Array(0.21698113, 0.3207547, 0.6509434)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wy8tx"]
+gradient = SubResource("Gradient_fttkb")
+fill = 1
+fill_from = Vector2(0.453, 0.506)
+
+[node name="Key" type="Area2D" unique_id=2131832001 groups=["key"]]
+script = ExtResource("1_fttkb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=313830212]
+position = Vector2(-3.999999, 1.2500002)
+scale = Vector2(1.4285715, 2.1250002)
+texture = ExtResource("1_yk2u2")
+region_enabled = true
+region_rect = Rect2(176, 152, 14, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=970823234]
+position = Vector2(-3.5, 1)
+shape = SubResource("RectangleShape2D_fttkb")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1859954669]
+color = Color(0.6155136, 0.42411622, 0.08047601, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_wy8tx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

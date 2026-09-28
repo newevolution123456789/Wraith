@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://jymmbh7luviv"]
+
+[ext_resource type="Texture2D" uid="uid://dnkty68e2je1n" path="res://assets/candle attempt 1.png" id="1_lkaa1"]
+[ext_resource type="Texture2D" uid="uid://beea7v8t2tkjl" path="res://assets/light_point.webp" id="2_0ywi5"]
+
+[node name="Flashlight" type="Node2D" unique_id=1715476071]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=333199223]
+position = Vector2(280, 303.375)
+scale = Vector2(0.03562341, 0.016589496)
+texture = ExtResource("1_lkaa1")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D" unique_id=1333312619]
+position = Vector2(-196.50034, 899.85754)
+scale = Vector2(0.8705641, 2.4419053)
+color = Color(0.8405767, 0.65283257, 0.18855456, 1)
+energy = 1.25
+shadow_enabled = true
+shadow_filter = 1
+texture = ExtResource("2_0ywi5")
+texture_scale = 5.92

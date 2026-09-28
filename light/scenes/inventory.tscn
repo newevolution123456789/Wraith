@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://btiuaifuctje3"]
+
+[ext_resource type="Script" uid="uid://b7exyys1ghpyw" path="res://scripts/inventory.gd" id="1_hj2ta"]
+[ext_resource type="Texture2D" uid="uid://pwnwyleh8b54" path="res://assets/inventory.png" id="2_ty45s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_53g1v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ty45s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Inventory" type="Node2D" unique_id=37248457]
+script = ExtResource("1_hj2ta")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1410994777]
+offset_left = -88.0
+offset_top = -522.0
+offset_right = 1665.0
+offset_bottom = 959.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1705079934]
+position = Vector2(909, 118)
+scale = Vector2(0.32273114, 0.2638889)
+sprite_frames = SubResource("SpriteFrames_53g1v")
