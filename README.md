@@ -51,3 +51,8 @@ This game was made entirely on Godot
 You can play Wraith on itch.io on :
 https://projectuploaderig.itch.io/wraith
 
+
+
+# Assets
+Player from https://kevins-moms-house.itch.io/camelot 
+Tileset from https://incolgames.itch.io/dungeon-platformer-tile-set-pixel-art?download
